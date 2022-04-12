@@ -5,12 +5,16 @@ const GameContainer = () => {
 
     const [buttonsToLight, setButtonsToLight] = useState([])
     const [isActive, setIsActive] = useState("")
-    const [nextButton, setNextButton] = useState("")
+    const [feedback, setFeedback] = useState("")
     const [gameIndex, setGameIndex] = useState(0)
     const [round, setRound] = useState(1)
+    //have state gor gameActive ? can press keys : nothing happens when you click buttons
 
     const buttons = ["red", "blue", "green", "yellow"]
     let ms = 1000
+
+    const winningFeedback = ["Great!!", "Awesome!", "Nailed it!", "You got it!"]
+    const losingFeedback = ["Unlucky!", "Fail!", "Not this time!"]
 
     const generateGame = () => {
         console.log("Let's Play!")
@@ -34,7 +38,7 @@ const GameContainer = () => {
     const setNxtButton = (colour) => {
         setIsActive(colour)
         if (colour === buttonsToLight[gameIndex]){
-            console.log("Match")
+            
             if (gameIndex+1 !== buttonsToLight.length){
                 setGameIndex(gameIndex+1)
                
@@ -43,14 +47,18 @@ const GameContainer = () => {
                 setRound(round+1)
                 setGameIndex(0)
                 setIsActive("")
+                let index = Math.round(Math.random()*winningFeedback.length-1)
+                setFeedback(winningFeedback[index])
             }
            
         } else {
-            console.log("fail")
+            let index = Math.round(Math.random()*losingFeedback.length-1)
+            setFeedback(losingFeedback[index])
             setButtonsToLight([])
             setIsActive("")
-            setGameIndex("")
+            setGameIndex(0)
             setRound(1)
+
         }
         
     }
@@ -72,12 +80,20 @@ const GameContainer = () => {
 
     return(
         <div className="game-container">
-            <h2>Game Container</h2>
-            <h3>Round: {round}</h3>
-            {/* <Buttons handleButton={handleButton} isActive={isActive} /> */}
+            <h2>Memory Game</h2>
+            <div className="game-info">
+                <h3>Round: {round}</h3>
+                {/* <Buttons handleButton={handleButton} isActive={isActive} /> */}
+                
+            </div>
             <Buttons setNxtButton={setNxtButton} isActive={isActive} />
+            <h2 id="feedback">{feedback}</h2>
 
-            <button onClick={generateGame} value="play"> Play Game</button>
+            {round === 1 ? 
+                <button id="play-button" onClick={generateGame} value="play"> Play Game</button> : 
+                <button id="play-button" onClick={generateGame} value="play"> Play Again</button>}
+                
+            
         </div>
     )
 
