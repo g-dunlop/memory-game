@@ -1,10 +1,14 @@
 import React from 'react';
 import './App.css';
 import GameContainer from './containers/GameContainer';
+import {useToggle} from './hooks/useToggle'
 
 function App() {
+
+  const [isDarkMode, setIsDarkMode] = useToggle(false);
   return (
-    <div className="App">
+    <div className={isDarkMode ? "App dark": "App light"}>
+      <button onClick={setIsDarkMode}>Dark/Light</button>
       <GameContainer />
     </div>
   );

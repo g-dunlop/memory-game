@@ -1,6 +1,20 @@
 .App {
   text-align: center;
+  color:rgb(0, 56, 141);
+  background-color:white;
 }
+
+.light{
+  color:rgb(0, 56, 141);
+  background-color:white;
+}
+
+.dark{
+  color:white;
+  background-color:black
+}
+
+
 
 .button-section{
   display:flex;
@@ -10,17 +24,18 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  width:405px;
-  grid-row-gap:5px;
-  grid-column-gap:5px;
+  width:305px;
+  grid-row-gap:15px;
+  grid-column-gap:15px;
   
 }
 
 .game-button{
-  height:200px;
-  width:200px;
+  height:150px;
+  width:150px;
   background-color:rgba(0, 0, 255, 0.2);
   border-radius:10px;
+  
 }
 
 .button{
@@ -30,6 +45,7 @@
 #yellow{
   background-color:rgba(255, 255, 0, 0.993);
   border-radius:10px;
+  
 
 }
 #red{
@@ -47,6 +63,16 @@
   border-radius:10px;
 }
 
+#orange{
+  background-color:rgba(255, 145, 0, 0.993);
+  border-radius:10px;
+}
+
+#pink{
+  background-color:rgba(255, 0, 221, 0.993);
+  border-radius:10px;
+}
+
 .light {
   border:5px solid rgb(1, 1, 2);
   background-color:rgba(0, 0, 255, 0);
@@ -54,16 +80,92 @@
 }
 
 #play-button{
-  width:200px;
+  width:250px;
   height:50px;
-  background-color:antiquewhite;
+  background-color:rgb(230, 127, 24);
   font-size:2rem;
   border-radius:10px;
   margin-top:2rem;
 }
 
 #feedback{
-  position:absolute;
-  right:8rem;
-  bottom:8rem;
+  
+  font-size:3.5rem;
+  color:rgb(0, 56, 141);
+}
+
+.game-container{
+  display:flex;
+  width:100%;
+  height:100vh;
+  justify-content:center;
+  align-items:center;
+  text-align:left;
+}
+
+.left{
+  margin-right:2rem;
+}
+
+.game-container .left > h2{
+  font-size:3rem;
+  /* color:rgb(0, 56, 141); */
+  margin:0;
+  margin-top:1rem;
+  
+  
+}
+
+
+
+.game-info > h3{
+  font-size:2rem;
+  /* color:rgb(0, 56, 141); */
+  padding:1rem;
+  text-align:left;
+}
+
+.options-section{
+  display:flex;
+  justify-content:center;
+}
+.speed-section{
+  display:flex;
+  padding:1rem;
+  align-items:center;
+  text-align:left;
+}
+
+.speed-section{
+  font-size:1.5rem;
+  /* color:rgb(0, 56, 141); */
+  margin-bottom:0;
+}
+
+.speed-section > button{
+  height:3rem;
+  margin: 1rem 0rem 1rem 1rem;
+  /* margin-bottom:1rem; */
+  border-radius:50%;
+  min-width:6rem;
+  background-color:rgb(230, 127, 24);
+  padding:1rem;
+}
+
+.button-number-section{
+  font-size:1.5rem;
+  /* color:rgb(0, 56, 141); */
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:1rem;
+}
+
+.button-number-section > button{
+  padding:1rem;
+  margin:1rem 0rem 1rem 1rem;
+  background-color:rgb(230, 127, 24);
+  border-radius:50%;
+  min-width:6rem;
+  height:3rem;
 }
