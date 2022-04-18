@@ -34,8 +34,8 @@ const GameContainer = () => {
         let gameArray = [...buttonsToLight];
         let index;
         for (let i=round; i<round+1; i++){
-            index = (Math.round(Math.random()*buttons.length-1));
-            // console.log(index)
+            index = (Math.round(Math.random()*(buttons.length-1)));
+            console.log(index)
             gameArray.push(buttons[index])
         } 
 
@@ -124,13 +124,13 @@ const GameContainer = () => {
                 </div>
                 
                     <div className="speed-section">
-                        <h3>Speed: {speed}</h3>
+                        <h3>Speed: <span>{speed}</span></h3>
                         <button onClick={handleSpeedButtonClick} value="normal">Normal</button>
                         <button onClick={handleSpeedButtonClick} value="fast">Fast</button>
                     </div>
 
                     <div className="button-number-section">
-                        <h3>No. of Buttons: {buttonsNumber}</h3>
+                        <h3>No. of Buttons: <span>{buttonsNumber}</span></h3>
                         <button onClick={handleButtonNumberClick} value="4">4</button>
                         <button onClick={handleButtonNumberClick} value="6">6</button>
                     </div>
@@ -138,7 +138,7 @@ const GameContainer = () => {
                 {round === 1 ? 
                     <button id="play-button" onClick={generateGame} value="play"> Play </button> : 
                     <button id="play-button" onClick={generateGame} value="play"> Play Round {round}</button>}
-                <h2 id="feedback">{feedback}</h2>  
+                    <h2 id="feedback">{feedback}</h2>  
             </div>
             <div className="right">
                 {buttonsNumber === '4' ? <Buttons setNxtButton={setNxtButton} isActive={isActive} /> : <ButtonsSix setNxtButton={setNxtButton} isActive={isActive} /> }

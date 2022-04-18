@@ -8,7 +8,7 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useToggle(false);
   return (
     <div className={isDarkMode ? "App dark": "App light"}>
-      <button onClick={setIsDarkMode}>Dark/Light</button>
+      <button className="dark-mode" onClick={setIsDarkMode}>Dark/Light</button>
       <GameContainer />
     </div>
   );
