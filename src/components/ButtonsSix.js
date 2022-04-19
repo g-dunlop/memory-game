@@ -19,12 +19,12 @@ const ButtonsSix = ({handleButton, isActive, setNxtButton}) => {
     <div className = "button-section">
     <div className="button-container">
 
-        <div id="red"><button onClick={handleClick} className={isActive === "red" ? "game-button light":"game-button"} value="red" ></button></div>
-        <div id="blue"><button onClick={handleClick} className={isActive === "blue" ? "game-button light":"game-button"} value="blue" ></button></div>
-        <div id="green"><button onClick={handleClick} className={isActive === "green" ? "game-button light":"game-button"} value="green" ></button></div>
-        <div id="yellow"><button onClick={handleClick} className={isActive === "yellow" ? "game-button light":"game-button"} value="yellow" ></button></div>
-        <div id="orange"><button onClick={handleClick} className={isActive === "orange" ? "game-button light":"game-button"} value="orange" ></button></div>
-        <div id="pink"><button onClick={handleClick} className={isActive === "pink" ? "game-button light":"game-button"} value="pink" ></button></div>
+        <div id="red"><button onClick={handleClick} className={isActive === "red" ? "game-button lighter":"game-button"} value="red" ></button></div>
+        <div id="blue"><button onClick={handleClick} className={isActive === "blue" ? "game-button lighter":"game-button"} value="blue" ></button></div>
+        <div id="green"><button onClick={handleClick} className={isActive === "green" ? "game-button lighter":"game-button"} value="green" ></button></div>
+        <div id="yellow"><button onClick={handleClick} className={isActive === "yellow" ? "game-button lighter":"game-button"} value="yellow" ></button></div>
+        <div id="orange"><button onClick={handleClick} className={isActive === "orange" ? "game-button lighter":"game-button"} value="orange" ></button></div>
+        <div id="pink"><button onClick={handleClick} className={isActive === "pink" ? "game-button lighter":"game-button"} value="pink" ></button></div>
     </div>
     
     </div>

@@ -11,11 +11,17 @@
 .light{
   color:rgb(0, 56, 141);
   background-color:white;
+  background-image:url('./images/background-light2.png');
+  background-size:cover;
+  background-repeat:no-repeat;
 }
 
 .dark{
   color:white;
-  background-color:black
+  background-color:black;
+  background-image:url('./images/background-dark2.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
 }
 
 .dark-mode{
@@ -86,7 +92,7 @@
   border-radius:10px;
 }
 
-.light {
+.lighter {
   border:5px solid rgb(1, 1, 2);
   background-color:rgba(0, 0, 255, 0);
 }
