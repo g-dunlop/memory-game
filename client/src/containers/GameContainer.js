@@ -1,9 +1,12 @@
-import React, {useState} from 'react';
+import React, {useState, useContext, useEffect} from 'react';
 import Buttons from '../components/Buttons';
 import ButtonsSix from '../components/ButtonsSix';
+import UserContext from '../context/UserContext';
 
 
 const GameContainer = () => {
+
+    const {user} = useContext(UserContext);
 
     const [buttonsToLight, setButtonsToLight] = useState([])
     const [isActive, setIsActive] = useState("")
@@ -13,7 +16,15 @@ const GameContainer = () => {
     const [speed, setSpeed] = useState("fast")
     const [buttonsActive, setButtonsActive] = useState(false)
     const [buttonsNumber, setButtonsNumber] = useState('4')
+    const [userHighScore, setUserHighScore] = useState(user.highScore)
+    const [userScore, setUserScore] = useState(0)
     //have state gor gameActive ? can press keys : nothing happens when you click buttons
+
+    useEffect(() => {
+        setUserScore(round-1)
+        setUserHighScore(user.highScore)
+    }, [round])
+
 
     let buttons;
     if (buttonsNumber === '4'){
@@ -21,8 +32,6 @@ const GameContainer = () => {
     } else {
      buttons = ["red", "blue", "green", "yellow", "orange", "pink"]
     }
-
-
     let ms = 1000
 
     const winningFeedback = ["Great!!", "Awesome!", "Nailed it!", "You got it!"]

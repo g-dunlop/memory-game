@@ -4,6 +4,7 @@ import './App.css';
 import GameContainer from './containers/GameContainer';
 import {useToggle} from './hooks/useToggle';
 import {getUser, createUser} from './HighScoreService';
+import UserContext from './context/UserContext';
 
 function App() {
 
@@ -27,11 +28,11 @@ function App() {
 
   const handleExistingClick = (e) => {
     setIsModalOpen(!isModalOpen);
-  }
+  } //use the hook for this
 
   const handleNewClick = (e) => {
     setIsModalOpen(!isModalOpen);
-  }
+  } //use the hook for this
 
   const getUserInfo = () => {
     existingUsername ? getUser(existingUsername) //this will need to go through services
@@ -61,10 +62,19 @@ function App() {
           <button onClick={handleNewClick}>OK</button>
         </Modal>
 
+   
     <div className={isDarkMode ? "App dark": "App light"}>
       <button className="dark-mode" onClick={setIsDarkMode}>Dark/Light</button>
-      {user !== null ? <><p> Hi {user.username}</p> <p>High Score:{user.highScore}</p></> : null}
-      <GameContainer />
+
+      {!isModalOpen ? 
+      <UserContext.Provider value={{user}}>
+        <GameContainer highScore={user.highScore} />
+      </UserContext.Provider> : null}
+     
+      {user !== null ? <><p> Hi {user.username}</p></> : null}
+
+
+      
     </div>
     </>
   );
