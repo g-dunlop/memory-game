@@ -31,8 +31,7 @@
     </li>
   <li>npm run seeds</li>
   <li>npm run server:dev</li>
-  <li>cd ..</li>
-  <li>cd client</li>
+  <li>cd ../client</li>
   <li>npm install</li>
   <li>npm start</li>
 </ol>
