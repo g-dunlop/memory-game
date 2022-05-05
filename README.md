@@ -22,8 +22,11 @@
   <li>clone repository</li>
   <li>cd server</li>
   <li>npm install</li>
+  
+  <li>Get mongod up and running.  The folling terminal commands work for me:</li>
+    1. sudo mkdir -p /System/Volumes/Data/data/db
+    2. 
   <li>npm run seeds</li>
-  <li>mongod instructions</li>
   <li>npm run server:dev</li>
   <li>cd ..</li>
   <li>cd client</li>
