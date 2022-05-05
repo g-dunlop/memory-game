@@ -1,6 +1,7 @@
 <h1>Name/Description</h1>
-<h3>Link to working site</h3>
+<h2>Link to working site</h2>
 
+<h2>About:</h2>
 <p>This was a 2-day individual project I worked on at the end of week 7 of the CodeClan course.
 
 <h2>Screenshots: </h2>
