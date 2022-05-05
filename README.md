@@ -23,7 +23,7 @@
   <li>cd server</li>
   <li>npm install</li>
   
-  <li><p>Get mongod up and running.  The folling terminal commands work for me: </p>
+  <li>Get mongod up and running.  The folling terminal commands work for me:
     <p>1. sudo mkdir -p /System/Volumes/Data/data/db</p>
     2. sudo chown -R `id -un` /System/Volumes/Data/data/db
     3. --dbpath /System/Volumes/Data/data/db
