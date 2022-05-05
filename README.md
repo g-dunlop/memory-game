@@ -1,4 +1,4 @@
-<h1>Name/Description</h1>
+<h1>Memory Game App</h1>
 <h2>Link to working site</h2>
 
 <h2>About:</h2>
