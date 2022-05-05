@@ -2,7 +2,7 @@
 <h2>Link to working site</h2>
 
 <h2>About:</h2>
-<p>This was a 2-day individual project I worked on at the end of week 7 of the CodeClan course.  It's based on a toy called 'Simon', which ~I had when I was younger.  I chose to make this project to consolidate React and MongoDB and to challenge myself with a project that required some game logic.
+<p>This was a 2-day individual project I worked on at the end of week 7 of the CodeClan course.  It's based on a toy called 'Simon', which ~I had when I was younger.  I chose to make this project to consolidate React and MongoDB and to challenge myself with a project that required some game logic.  As I learned new things on the course, such as UseContext, React Modal, I applied them to this project as a way of practicing them.
 
 <h2>Screenshots: </h2>
 
@@ -31,6 +31,6 @@
 </ol>
 
 
-
+<h2>Reflection</h2>
 
 
