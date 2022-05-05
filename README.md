@@ -19,11 +19,10 @@
 
 <h2>How to run:</h2>
 <ol>
-  <li>clone repository</li>
+  <li>clone repository to your computer</li>
   <li>cd server</li>
   <li>npm install</li>
-  
-  <li>Get mongod up and running.  The folling terminal commands work for me:
+  <li>Get mongod up and running.  The following terminal commands work for me if you're not sure how:
     <ul>
       <li>sudo mkdir -p /System/Volumes/Data/data/db</li>
       <li>sudo chown -R `id -un` /System/Volumes/Data/data/db</li>
@@ -34,6 +33,7 @@
   <li>npm run server:dev</li>
   <li>cd ..</li>
   <li>cd client</li>
+  <li>npm install</li>
   <li>npm start</li>
 </ol>
 
