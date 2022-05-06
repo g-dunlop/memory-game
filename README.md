@@ -37,6 +37,17 @@
 </ol>
 
 
-<h2>Reflection</h2>
+<h2>What I learned</h2>
+<ul>
+  <li>I got some good practice with useEffect on this project, particularly with the animation of the squares lighting up.</li>
+  <li>I also, got some good practice with useState and game logic, particularly in handling the user input during the game itself.</li>
+  <li>I just had a crack at this without any planning and it affected the design and my ability to change things up later.</li>
+ </ul>
+
+<h2>What I would do differently</h2>
+<ul>
+  <li>Plan!  At least do some wireframing for a small personal project.</li>
+  <li>Maybe by the time anybody reads this, I'll have learned how to use authentication to stop duplicate names entering the databse.</li>
+</ul>
 
 
