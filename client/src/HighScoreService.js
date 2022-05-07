@@ -13,3 +13,16 @@ export const createUser = (payload) => {
     })
     .then(res => res.json())
 }
+
+export const updateUser = (user) => {
+    return fetch(baseUrl + user._id, {
+        method:'PUT',
+        body: JSON.stringify(user),
+        headers:{
+            'Content-Type':'application/json'
+        }
+    })
+    .then(res=>res.json)
+}
+//for sign-in, maybe get individual user, if result is none, create User, else return that there is already a problem
+//post highscore

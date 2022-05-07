@@ -2,9 +2,10 @@ import React, {useState, useContext, useEffect} from 'react';
 import Buttons from '../components/Buttons';
 import ButtonsSix from '../components/ButtonsSix';
 import UserContext from '../context/UserContext';
+import Header from '../components/Header';
 
 
-const GameContainer = () => {
+const GameContainer = ({updateHighScore}) => {
 
     const {user} = useContext(UserContext);
 
@@ -16,14 +17,13 @@ const GameContainer = () => {
     const [speed, setSpeed] = useState("fast")
     const [buttonsActive, setButtonsActive] = useState(false)
     const [buttonsNumber, setButtonsNumber] = useState('4')
-    const [userHighScore, setUserHighScore] = useState(user.highScore)
     const [userScore, setUserScore] = useState(0)
     //have state gor gameActive ? can press keys : nothing happens when you click buttons
 
-    useEffect(() => {
-        setUserScore(round-1)
-        setUserHighScore(user.highScore)
-    }, [round])
+    // useEffect(() => {
+    //     setUserScore(round-1)
+    //     // setUserHighScore(user.highScore)
+    // }, [round])
 
 
     let buttons;
@@ -74,12 +74,16 @@ const GameContainer = () => {
         } else {
         setIsActive(colour)
         if (colour === buttonsToLight[gameIndex]){
+            //this is where we can give one point per button click
+            setUserScore(userScore+1);
+            // checkHighScore(userScore);
             
             if (gameIndex+1 !== buttonsToLight.length){
                 setGameIndex(gameIndex+1)
                
             } else{
                 console.log("You win this time")
+                //this is where we can give one point per round
                 setRound(round+1)
                 setGameIndex(0)
                 setIsActive("")
@@ -94,6 +98,7 @@ const GameContainer = () => {
             setButtonsToLight([])
             setIsActive("")
             setGameIndex(0)
+            setUserScore(0)
             setRound(1)
             setButtonsActive(false)
         }
@@ -108,6 +113,19 @@ const GameContainer = () => {
         setButtonsNumber(evt.target.value)
     }
 
+    useEffect(() => {
+        checkHighScore(userScore)
+    }, [userScore])
+
+    const checkHighScore = (score) => {
+        console.log(score)
+        if (score <= user.highScore){
+            return
+        } else {
+            updateHighScore(score);
+            console.log(score)
+        }
+    }
 
 
     // const handleButton = (colour) => {
@@ -124,11 +142,19 @@ const GameContainer = () => {
     // }
 
     return(
+        <>
+        <Header></Header>
         <div className="game-container">
             <div className="left">
-                <h2>Memory Game</h2>
+                <div className="user-details">
+                <h3>Hi {user.username}!</h3>
+                <h3>High Score:{user.highScore}</h3>
+                
+                <h1>Score: {userScore}</h1>
+                </div>
                 <div className="game-info">
                     <h3>Round: {round}</h3>
+                    
                     {/* <Buttons handleButton={handleButton} isActive={isActive} /> */}
                 </div>
                 
@@ -158,6 +184,7 @@ const GameContainer = () => {
            
             
         </div>
+        </>
     )
 
 }

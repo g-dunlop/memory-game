@@ -1,11 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
 
-.App {
+.app {
   text-align: center;
   color:rgb(0, 56, 141);
   background-color:white;
   font-family:'VT323';
   border:none;
+  height:100vh;
+  width:100%;
+}
+
+
+/* .modal-component{
+  margin:0;
+} */
+
+.modal-container{
+   display:flex; 
+  height:50vh;
+  text-align:center;
+  justify-content:center;
+  align-items:center;
+  font-family:'VT323';
+  width:100%; 
+} 
+
+.user-type-button{
+  padding:1rem;
+  background-color:brown;
+  font-family:'VT323';
+  margin:1rem;
+  color:white;
+  font-size:2rem;
+  width:10rem;
+}
+
+.user-type-button:hover{
+  color:black;
+  background-color:rgba(165, 42, 42, 0.301);
+  cursor:pointer;
+}
+
+/* .user-type-button:focus{
+
+} */
+
+.user-type-input{
+  font-family:'VT323';
+}
+
+.user-type-submit{
+  font-family:'VT323';
 }
 
 .light{
@@ -36,6 +81,9 @@
 }
 
 
+.user-details{
+  text-align:right;
+}
 
 .button-section{
   display:flex;
@@ -117,7 +165,7 @@
 .game-container{
   display:flex;
   width:100%;
-  height:90vh;
+  height:80vh;
   justify-content:center;
   align-items:center;
   text-align:left;
