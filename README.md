@@ -8,7 +8,7 @@
 <table>
   <tr>
     <td><img width="1280" alt="MemoryGame_1" src="https://user-images.githubusercontent.com/88304522/167289190-169641ed-254f-462b-ad9d-b1589e008c72.png"></td>
-  <tr><img width="1280" alt="MemoryGame_2" src="https://user-images.githubusercontent.com/88304522/167289203-01c0eabb-7249-467c-883e-489bbb70f4ab.png"></tr>
+  <td><img width="1280" alt="MemoryGame_2" src="https://user-images.githubusercontent.com/88304522/167289203-01c0eabb-7249-467c-883e-489bbb70f4ab.png"></td>
   </tr>
   <tr>
     <td><img width="1280" alt="MemoryGame_3" src="https://user-images.githubusercontent.com/88304522/167289211-2289404c-bfec-4e33-8527-fab40c2d7001.png"></td>
