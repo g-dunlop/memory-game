@@ -12,12 +12,12 @@
 <p class="p">For a short video preview of the app, please visit my  <a href="https://g-dunlop.github.io/g-dunlop-portfolio-website/">portfolio site</a>:
 <table class="table">
   <tr class="tr">
-    <td class="td"><img width="1280" alt="MemoryGame_1" src="https://user-images.githubusercontent.com/88304522/167289190-169641ed-254f-462b-ad9d-b1589e008c72.png"></td>
-  <td class="td"><img width="1280" alt="MemoryGame_2" src="https://user-images.githubusercontent.com/88304522/167289203-01c0eabb-7249-467c-883e-489bbb70f4ab.png"></td>
+    <td class="td"><img class="img" width="1280" alt="MemoryGame_1" src="https://user-images.githubusercontent.com/88304522/167289190-169641ed-254f-462b-ad9d-b1589e008c72.png"></td>
+  <td class="td"><img class="img" width="1280" alt="MemoryGame_2" src="https://user-images.githubusercontent.com/88304522/167289203-01c0eabb-7249-467c-883e-489bbb70f4ab.png"></td>
   </tr>
   <tr class="tr">
-    <td class="td"><img width="1280" alt="MemoryGame_3" src="https://user-images.githubusercontent.com/88304522/167289211-2289404c-bfec-4e33-8527-fab40c2d7001.png"></td>
-    <td class="td"><img width="1280" alt="MemoryGame_4" src="https://user-images.githubusercontent.com/88304522/167289219-3d682d89-f6fd-46b7-bbf1-5f36e4fe0502.png"></td>
+    <td class="td"><img class="img" width="1280" alt="MemoryGame_3" src="https://user-images.githubusercontent.com/88304522/167289211-2289404c-bfec-4e33-8527-fab40c2d7001.png"></td>
+    <td class="td"><img class="img" width="1280" alt="MemoryGame_4" src="https://user-images.githubusercontent.com/88304522/167289219-3d682d89-f6fd-46b7-bbf1-5f36e4fe0502.png"></td>
   </tr>
  </table>
 </section>
